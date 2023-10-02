@@ -2,8 +2,13 @@
 import java.util.Scanner;
 
 public class Main {
+    static final String alphabet = " -йцукеёнгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮЁ";
     public static void main(String[] args) {
-        String alphabet = " -йцукеёнгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮЁ";
+        Main a = new Main();
+        a.getFIO();
+
+    }
+    public void getFIO(){
         int probelCount=0;
         boolean isValid=true;
         String fio = new Scanner(System.in).nextLine();
@@ -20,14 +25,14 @@ public class Main {
                 break;
             }
         }
-            if(isValid && probelCount==2){
-                System.out.println("Фамилия: "+surname);
-                System.out.println("Имя: "+name);
-                System.out.println("Отчество: "+otchestvo);
-            }
-            else{
-                System.out.println("Ввод неправильный");
-            }
+        if(isValid && probelCount==2){
+            System.out.println("Фамилия: "+surname);
+            System.out.println("Имя: "+name);
+            System.out.println("Отчество: "+otchestvo);
+        }
+        else{
+            System.out.println("Ввод неправильный");
         }
 
+    }
     }
